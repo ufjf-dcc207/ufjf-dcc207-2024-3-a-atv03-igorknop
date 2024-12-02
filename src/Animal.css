@@ -24,11 +24,12 @@
     grid-area: peso;
   }
 
-  .exticao {
+  .extincao {
     background-color: darkred;
     color: white;
     min-height: 1em;
     grid-area: extincao;
+    padding: 0.2em;
   }
 }
 
