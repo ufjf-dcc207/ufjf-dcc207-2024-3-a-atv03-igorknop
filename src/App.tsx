@@ -4,7 +4,7 @@ import Animal from "./Animal";
 function App() {
   return (
     <div className="app">
-      <Animal />
+      <Animal icone="🦁" nome = "Leão" peso = {190.37} extincao={true}/>
     </div>
   );
 }
