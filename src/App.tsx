@@ -15,12 +15,8 @@ function App() {
   const exA1: ReactNode[] = [];
   const exB2: ReactNode[] = [];
   for (let i = 0; i < ANIMAIS.length; i++) {
-    let ex;
-    if (ANIMAIS[i][2] < 200.0) {
-      ex = exA1;
-    } else {
-      ex = exB2;
-    }
+    let ex = ANIMAIS[i][2] < 200.0 ? exA1 : exB2;
+
     ex.push(
       <Animal
         key={ANIMAIS[i][1]}
