@@ -1,0 +1,22 @@
+type ExibicaoTuplaType = [string, string, string, AnimaisTuplaType[]];
+type AnimaisTuplaType = [string, string, number, boolean];
+const EXIBICOES: ExibicaoTuplaType[] = [
+  [
+    "A1",
+    "2024-12-06T08:00:00.000-03:00",
+    "2024-12-06T12:00-03:00",
+    [
+      ["🦜", "Papagaio", 0.12, false],
+      ["🦩", "Flamingo", 12.0, true],
+      ["🦁", "Leão", 190.0, true],
+    ],
+  ],
+  [
+    "B2",
+    "2024-12-06T13:00:00.000-03:00",
+    "2024-12-06T17:00-03:00",
+    [["🦒", "Girafa", 1200, true]],
+  ],
+];
+
+export default EXIBICOES;
