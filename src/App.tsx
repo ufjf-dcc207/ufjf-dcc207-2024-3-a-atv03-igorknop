@@ -1,7 +1,10 @@
 import "./App.css";
 import Animal from "./Animal";
 import Exibicao from "./Exibicao";
-import EXIBICOES from "./exibicoes";
+import EXIBICOES, { AnimaisTuplaType } from "./exibicoes";
+
+interface ListaAnimaisProps { animais: Array<AnimaisTuplaType>};
+
 
 function App() {
   return (
@@ -13,18 +16,27 @@ function App() {
           fechamento={new Date(exibicao[2])}
           cercado={exibicao[0]}
         >
-          {exibicao[3].map((animal) => (
-            <Animal
-              key={animal[1]}
-              icone={animal[0]}
-              nome={animal[1]}
-              peso={animal[2]}
-              extincao={animal[3]}
-            />
-          ))}
+          <ListaAnimais animais={exibicao[3]} />
         </Exibicao>
       ))}
     </div>
+  );
+}
+
+
+function ListaAnimais({ animais }:ListaAnimaisProps) {
+  return (
+    <>
+      {animais.map((animal) => (
+        <Animal
+          key={animal[1]}
+          icone={animal[0]}
+          nome={animal[1]}
+          peso={animal[2]}
+          extincao={animal[3]}
+        />
+      ))}
+    </>
   );
 }
 

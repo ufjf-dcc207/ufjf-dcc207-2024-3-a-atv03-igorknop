@@ -1,6 +1,6 @@
-type ExibicaoTuplaType = [string, string, string, AnimaisTuplaType[]];
-type AnimaisTuplaType = [string, string, number, boolean];
-const EXIBICOES: ExibicaoTuplaType[] = [
+type ExibicaoTuplaType = [string, string, string, Array<AnimaisTuplaType>];
+export type AnimaisTuplaType = [string, string, number, boolean];
+const EXIBICOES: Array<ExibicaoTuplaType> = [
   [
     "A1",
     "2024-12-06T08:00:00.000-03:00",
@@ -18,5 +18,4 @@ const EXIBICOES: ExibicaoTuplaType[] = [
     [["🦒", "Girafa", 1200, true]],
   ],
 ];
-
 export default EXIBICOES;
